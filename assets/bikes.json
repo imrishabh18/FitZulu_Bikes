@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Kawasaki",
+        "price": 56,
+        "metadata": "cylinder, high mileage, petrol"
+    },
+    {
+        "id": 2,
+        "name": "Harley",
+        "price": 56,
+        "metadata": "cylinder, high mileage, petrol"
+    },
+    {
+        "id": 3,
+        "name": "Bullet",
+        "price": 56,
+        "metadata": "cylinder, high mileage, petrol"
+    }
+]
