@@ -1,7 +1,7 @@
 const express = require("express");
-const axios = require("axios");
 const fs = require("fs");
 const bodyParser = require("body-parser");
+const filter = require("../utils/utils");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -10,38 +10,36 @@ app.use(bodyParser.json());
 
 //load bikes.json into array
 const loadBikes = () => {
-  const jsonData = fs.readFileSync("bikes.json", "utf8");
+  const jsonData = fs.readFileSync("assets/bikes.json", "utf8");
   return JSON.parse(jsonData);
 };
 
 // bikes/location endpoint
 app.get("/bikes/all/:location", (req, res) => {
   const { location } = req.params;
-  if (location == "US-NC" || location == "IE" || location == "IN") {
-    const bikesData = loadBikes();
-    const convertedBikes = bikesData.map((bike) => {
-      let rate = 1.0;
-      if (location == "US-NC") {
-        rate = 0.9;
-      }
-      if (location == "IN") {
-        rate = 0.8;
-      }
-      if (location == "IN") {
-        rate = 0.85;
-      }
-      bike.price = bike.price * rate;
-      return {
-        ...bike,
-      };
-    });
 
-    console.log(convertedBikes);
-    res.status(200);
-    res.send(convertedBikes);
+  switch (location) {
+    case "US-NC":
+      rate = 0.9;
+      break;
+    case "IN":
+      rate = 0.8;
+      break;
+    case "IE":
+      rate = 0.85;
+      break;
+    default:
+      res.status(400);
+      return res.send(`No INFO available for ${location}`);
   }
-  res.status(400);
-  res.send(`No INFO available for ${location}`);
+
+  const bikesData = loadBikes();
+  const convertedBikes = bikesData.map((bike) => ({
+    ...bike,
+    price: bike.price * rate,
+  }));
+
+  res.status(200).json(convertedBikes);
 });
 
 app.get("/bikes/team", (req, res) => {
@@ -53,9 +51,18 @@ app.get("/bikes/team", (req, res) => {
 });
 
 //sort through price
-app.get("/test", (req, res) => {
+app.get("/bikes/search", (req, res) => {
   const bikesData = loadBikes();
-  console.log(req.params);
+  const brand = req.query.brand;
+  const minPrice = req.query.minprice;
+  const maxPrice = req.query.maxprice;
+  const rating = req.query.rating;
+
+  const response = filter.filterByBrand(bikesData, brand);
+  const responseRange = filter.filterByRange(response, minPrice, maxPrice);
+  const finalResponse = filter.filterByRating(responseRange, rating);
+
+  res.json({ finalResponse });
 });
 
 //listen on port

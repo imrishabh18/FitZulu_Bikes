@@ -1,20 +1,23 @@
 [
     {
         "id": 1,
-        "name": "Kawasaki",
+        "brand": "Kawasaki",
         "price": 56,
+        "rating": 4,
         "metadata": "cylinder, high mileage, petrol"
     },
     {
         "id": 2,
-        "name": "Harley",
+        "brand": "harley",
         "price": 56,
+        "rating": 5,
         "metadata": "cylinder, high mileage, petrol"
     },
     {
         "id": 3,
-        "name": "Bullet",
+        "brand": "Bullet",
         "price": 56,
+        "rating": 1,
         "metadata": "cylinder, high mileage, petrol"
     }
 ]
