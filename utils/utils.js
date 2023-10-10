@@ -22,4 +22,29 @@ const filterByRating = (bikeData, rating = 0) => {
   return bikeData.filter((bike) => bike.rating >= rating);
 };
 
-module.exports = { filterByBrand, filterByRange, filterByRating };
+// Price after tax
+const priceConverter = (price, location) => {
+  let rate = 0;
+  switch (location) {
+    case "US-NC":
+      rate = 0.9;
+      break;
+    case "IN":
+      rate = 0.8;
+      break;
+    case "IE":
+      rate = 0.85;
+      break;
+    default:
+      break;
+  }
+
+  return price - price * rate;
+};
+
+module.exports = {
+  filterByBrand,
+  filterByRange,
+  filterByRating,
+  priceConverter,
+};

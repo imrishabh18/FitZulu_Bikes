@@ -18,25 +18,15 @@ const loadBikes = () => {
 app.get("/bikes/all/:location", (req, res) => {
   const { location } = req.params;
 
-  switch (location) {
-    case "US-NC":
-      rate = 0.9;
-      break;
-    case "IN":
-      rate = 0.8;
-      break;
-    case "IE":
-      rate = 0.85;
-      break;
-    default:
-      res.status(400);
-      return res.send(`No INFO available for ${location}`);
+  if (location !== "US-NC" || location !== "IN" || location !== "IE") {
+    res.status(400);
+    return res.send(`No INFO available for ${location}`);
   }
 
   const bikesData = loadBikes();
   const convertedBikes = bikesData.map((bike) => ({
     ...bike,
-    price: bike.price * rate,
+    price: filter.priceConverter(price, location),
   }));
 
   res.status(200).json(convertedBikes);

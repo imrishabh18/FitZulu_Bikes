@@ -1,23 +1,391 @@
 [
-    {
-        "id": 1,
-        "brand": "Kawasaki",
-        "price": 56,
-        "rating": 4,
-        "metadata": "cylinder, high mileage, petrol"
-    },
-    {
-        "id": 2,
-        "brand": "harley",
-        "price": 56,
-        "rating": 5,
-        "metadata": "cylinder, high mileage, petrol"
-    },
-    {
-        "id": 3,
-        "brand": "Bullet",
-        "price": 56,
-        "rating": 1,
-        "metadata": "cylinder, high mileage, petrol"
-    }
+  {
+    "productName": "Honda CBR500R",
+    "productDescription": "A sporty and versatile motorcycle with a 471cc engine.",
+    "imgThumbnail": "https://example.com/honda-cbr500r.jpg",
+    "productId": 1001,
+    "brand": "Honda",
+    "price": 6899,
+    "taxPercentage": 5,
+    "rating": 4.7,
+    "metadata": "Sportbike, 500cc, ABS",
+    "timestamp": "2023-10-01T08:00:00Z"
+  },
+
+  {
+    "productName": "Kawasaki Ninja 400",
+    "productDescription": "A lightweight and agile sportbike with a 399cc engine.",
+    "imgThumbnail": "https://example.com/kawasaki-ninja400.jpg",
+    "productId": 1002,
+    "brand": "Kawasaki",
+    "price": 5499,
+    "taxPercentage": 4.5,
+    "rating": 4.6,
+    "metadata": "Sportbike, 400cc, ABS",
+    "timestamp": "2023-10-02T10:30:00Z"
+  },
+
+  {
+    "productName": "Yamaha YZF-R6",
+    "productDescription": "A high-performance supersport motorcycle with a 599cc engine.",
+    "imgThumbnail": "https://example.com/yamaha-yzf-r6.jpg",
+    "productId": 1003,
+    "brand": "Yamaha",
+    "price": 12999,
+    "taxPercentage": 6,
+    "rating": 4.8,
+    "metadata": "Supersport, 600cc, Quick Shift System",
+    "timestamp": "2023-10-03T14:15:00Z"
+  },
+
+  {
+    "productName": "Suzuki GSX-R750",
+    "productDescription": "A legendary sportbike with a 750cc engine and race-inspired design.",
+    "imgThumbnail": "https://example.com/suzuki-gsxr750.jpg",
+    "productId": 1004,
+    "brand": "Suzuki",
+    "price": 11499,
+    "taxPercentage": 5.5,
+    "rating": 4.9,
+    "metadata": "Sportbike, 750cc, Brembo brakes",
+    "timestamp": "2023-10-04T12:45:00Z"
+  },
+
+  {
+    "productName": "Ducati Panigale V4",
+    "productDescription": "An Italian masterpiece with a 1103cc V4 engine and cutting-edge technology.",
+    "imgThumbnail": "https://example.com/ducati-panigale-v4.jpg",
+    "productId": 1005,
+    "brand": "Ducati",
+    "price": 24995,
+    "taxPercentage": 7,
+    "rating": 4.9,
+    "metadata": "Superbike, 1100cc, Desmosedici Stradale engine",
+    "timestamp": "2023-10-05T16:20:00Z"
+  },
+
+  {
+    "productName": "Harley-Davidson Street Glide",
+    "productDescription": "A classic cruiser with a powerful Milwaukee-Eight 107 engine.",
+    "imgThumbnail": "https://example.com/harley-street-glide.jpg",
+    "productId": 1006,
+    "brand": "Harley-Davidson",
+    "price": 21899,
+    "taxPercentage": 6.5,
+    "rating": 4.6,
+    "metadata": "Cruiser, 1746cc, Infotainment system",
+    "timestamp": "2023-10-06T09:45:00Z"
+  },
+
+  {
+    "productName": "BMW S1000RR",
+    "productDescription": "A high-performance sportbike with a 999cc inline-four engine.",
+    "imgThumbnail": "https://example.com/bmw-s1000rr.jpg",
+    "productId": 1007,
+    "brand": "BMW",
+    "price": 16495,
+    "taxPercentage": 6.5,
+    "rating": 4.8,
+    "metadata": "Sportbike, 1000cc, Dynamic Traction Control",
+    "timestamp": "2023-10-07T11:10:00Z"
+  },
+
+  {
+    "productName": "Triumph Bonneville T120",
+    "productDescription": "A classic British motorcycle with a 1200cc parallel-twin engine.",
+    "imgThumbnail": "https://example.com/triumph-bonneville-t120.jpg",
+    "productId": 1008,
+    "brand": "Triumph",
+    "price": 11200,
+    "taxPercentage": 5.5,
+    "rating": 4.7,
+    "metadata": "Classic, 1200cc, Retro styling",
+    "timestamp": "2023-10-08T13:30:00Z"
+  },
+
+  {
+    "productName": "KTM 390 Duke",
+    "productDescription": "A nimble and lightweight naked bike with a 373cc engine.",
+    "imgThumbnail": "https://example.com/ktm-390-duke.jpg",
+    "productId": 1009,
+    "brand": "KTM",
+    "price": 5499,
+    "taxPercentage": 4.5,
+    "rating": 4.5,
+    "metadata": "Naked bike, 373cc, TFT display",
+    "timestamp": "2023-10-09T15:55:00Z"
+  },
+
+  {
+    "productName": "Harley-Davidson Iron 883",
+    "productDescription": "A classic cruiser with an 883cc Evolution engine and timeless style.",
+    "imgThumbnail": "https://example.com/harley-iron-883.jpg",
+    "productId": 1010,
+    "brand": "Harley-Davidson",
+    "price": 9899,
+    "taxPercentage": 5.5,
+    "rating": 4.4,
+    "metadata": "Cruiser, 883cc, Bobber-style",
+    "timestamp": "2023-10-10T17:40:00Z"
+  },
+
+  {
+    "productName": "Yamaha MT-07",
+    "productDescription": "A versatile naked bike with a 689cc twin-cylinder engine.",
+    "imgThumbnail": "https://example.com/yamaha-mt07.jpg",
+    "productId": 1011,
+    "brand": "Yamaha",
+    "price": 7599,
+    "taxPercentage": 4.5,
+    "rating": 4.6,
+    "metadata": "Naked bike, 689cc, Aggressive styling",
+    "timestamp": "2023-10-11T08:20:00Z"
+  },
+
+  {
+    "productName": "Ducati Monster 821",
+    "productDescription": "A stylish naked bike with an 821cc Testastretta engine.",
+    "imgThumbnail": "https://example.com/ducati-monster-821.jpg",
+    "productId": 1012,
+    "brand": "Ducati",
+    "price": 11595,
+    "taxPercentage": 6,
+    "rating": 4.7,
+    "metadata": "Naked bike, 821cc, Trellis frame",
+    "timestamp": "2023-10-12T10:15:00Z"
+  },
+
+  {
+    "productName": "Suzuki SV650",
+    "productDescription": "A popular and affordable naked bike with a 645cc V-twin engine.",
+    "imgThumbnail": "https://example.com/suzuki-sv650.jpg",
+    "productId": 1013,
+    "brand": "Suzuki",
+    "price": 7499,
+    "taxPercentage": 4.5,
+    "rating": 4.5,
+    "metadata": "Naked bike, 645cc, Low seat height",
+    "timestamp": "2023-10-13T12:00:00Z"
+  },
+
+  {
+    "productName": "Honda Rebel 500",
+    "productDescription": "A cruiser with a 471cc parallel-twin engine and a modern, rebellious design.",
+    "imgThumbnail": "https://example.com/honda-rebel-500.jpg",
+    "productId": 1014,
+    "brand": "Honda",
+    "price": 6399,
+    "taxPercentage": 5,
+    "rating": 4.6,
+    "metadata": "Cruiser, 500cc, Bobber styling",
+    "timestamp": "2023-10-14T14:30:00Z"
+  },
+
+  {
+    "productName": "Kawasaki Z900",
+    "productDescription": "A powerful naked bike with a 948cc inline-four engine and aggressive looks.",
+    "imgThumbnail": "https://example.com/kawasaki-z900.jpg",
+    "productId": 1015,
+    "brand": "Kawasaki",
+    "price": 9499,
+    "taxPercentage": 5,
+    "rating": 4.8,
+    "metadata": "Naked bike, 948cc, TFT display",
+    "timestamp": "2023-10-15T16:50:00Z"
+  },
+
+  {
+    "productName": "BMW R 1250 GS",
+    "productDescription": "An adventure bike with a 1254cc Boxer engine and advanced features for long journeys.",
+    "imgThumbnail": "https://example.com/bmw-r1250gs.jpg",
+    "productId": 1016,
+    "brand": "BMW",
+    "price": 18995,
+    "taxPercentage": 6.5,
+    "rating": 4.9,
+    "metadata": "Adventure bike, 1250cc, Dynamic ESA",
+    "timestamp": "2023-10-16T09:10:00Z"
+  },
+
+  {
+    "productName": "Triumph Tiger 900",
+    "productDescription": "An adventure touring bike with a 888cc triple-cylinder engine for off-road exploration.",
+    "imgThumbnail": "https://example.com/triumph-tiger900.jpg",
+    "productId": 1017,
+    "brand": "Triumph",
+    "price": 13900,
+    "taxPercentage": 6,
+    "rating": 4.7,
+    "metadata": "Adventure tourer, 888cc, Off-road capabilities",
+    "timestamp": "2023-10-17T11:40:00Z"
+  },
+
+  {
+    "productName": "KTM 1290 Super Adventure R",
+    "productDescription": "An off-road-focused adventure bike with a 1301cc V-twin engine.",
+    "imgThumbnail": "https://example.com/ktm-super-adventure-r.jpg",
+    "productId": 1018,
+    "brand": "KTM",
+    "price": 18999,
+    "taxPercentage": 6.5,
+    "rating": 4.8,
+    "metadata": "Adventure bike, 1300cc, Off-road suspension",
+    "timestamp": "2023-10-18T13:55:00Z"
+  },
+
+  {
+    "productName": "Harley-Davidson Road King",
+    "productDescription": "A classic touring cruiser with a Milwaukee-Eight 114 engine for comfortable long rides.",
+    "imgThumbnail": "https://example.com/harley-road-king.jpg",
+    "productId": 1019,
+    "brand": "Harley-Davidson",
+    "price": 21999,
+    "taxPercentage": 6,
+    "rating": 4.6,
+    "metadata": "Touring cruiser, 1868cc, Tour-Pak luggage",
+    "timestamp": "2023-10-19T15:25:00Z"
+  },
+
+  {
+    "productName": "Yamaha Tenere 700",
+    "productDescription": "An adventure bike with a 689cc CP2 engine, built for off-road exploration.",
+    "imgThumbnail": "https://example.com/yamaha-tenere700.jpg",
+    "productId": 1020,
+    "brand": "Yamaha",
+    "price": 9999,
+    "taxPercentage": 5,
+    "rating": 4.7,
+    "metadata": "Adventure bike, 689cc, Rally-inspired",
+    "timestamp": "2023-10-20T17:15:00Z"
+  },
+
+  {
+    "productName": "Ducati Multistrada V4",
+    "productDescription": "An adventure touring bike with a 1158cc V4 engine and advanced electronics.",
+    "imgThumbnail": "https://example.com/ducati-multistrada-v4.jpg",
+    "productId": 1021,
+    "brand": "Ducati",
+    "price": 24995,
+    "taxPercentage": 7,
+    "rating": 4.9,
+    "metadata": "Adventure tourer, 1150cc, Radar system",
+    "timestamp": "2023-10-21T08:45:00Z"
+  },
+
+  {
+    "productName": "Suzuki V-Strom 650",
+    "productDescription": "A versatile adventure touring bike with a 645cc V-twin engine.",
+    "imgThumbnail": "https://example.com/suzuki-vstrom-650.jpg",
+    "productId": 1022,
+    "brand": "Suzuki",
+    "price": 8399,
+    "taxPercentage": 5.5,
+    "rating": 4.6,
+    "metadata": "Adventure tourer, 645cc, Adjustable windscreen",
+    "timestamp": "2023-10-22T10:30:00Z"
+  },
+
+  {
+    "productName": "Honda Africa Twin",
+    "productDescription": "An adventure touring bike with a 1084cc parallel-twin engine for rugged terrains.",
+    "imgThumbnail": "https://example.com/honda-africa-twin.jpg",
+    "productId": 1023,
+    "brand": "Honda",
+    "price": 15699,
+    "taxPercentage": 6,
+    "rating": 4.8,
+    "metadata": "Adventure tourer, 1100cc, DCT transmission",
+    "timestamp": "2023-10-23T12:20:00Z"
+  },
+
+  {
+    "productName": "Kawasaki KLR650",
+    "productDescription": "A dual-sport bike with a 652cc single-cylinder engine for on-road and off-road adventures.",
+    "imgThumbnail": "https://example.com/kawasaki-klr650.jpg",
+    "productId": 1024,
+    "brand": "Kawasaki",
+    "price": 6999,
+    "taxPercentage": 5.5,
+    "rating": 4.5,
+    "metadata": "Dual-sport, 650cc, Long-range tank",
+    "timestamp": "2023-10-24T14:10:00Z"
+  },
+
+  {
+    "productName": "BMW F 850 GS",
+    "productDescription": "An adventure touring bike with an 853cc parallel-twin engine and off-road capabilities.",
+    "imgThumbnail": "https://example.com/bmw-f850gs.jpg",
+    "productId": 1025,
+    "brand": "BMW",
+    "price": 14395,
+    "taxPercentage": 6.5,
+    "rating": 4.7,
+    "metadata": "Adventure tourer, 850cc, Adjustable suspension",
+    "timestamp": "2023-10-25T16:05:00Z"
+  },
+
+  {
+    "productName": "Triumph Scrambler 1200",
+    "productDescription": "An off-road-inspired scrambler with a 1200cc parallel-twin engine.",
+    "imgThumbnail": "https://example.com/triumph-scrambler-1200.jpg",
+    "productId": 1026,
+    "brand": "Triumph",
+    "price": 13400,
+    "taxPercentage": 6,
+    "rating": 4.8,
+    "metadata": "Scrambler, 1200cc, High exhaust",
+    "timestamp": "2023-10-26T08:55:00Z"
+  },
+
+  {
+    "productName": "KTM 690 Enduro R",
+    "productDescription": "A hardcore off-road enduro bike with a 690cc single-cylinder engine.",
+    "imgThumbnail": "https://example.com/ktm-690-enduro-r.jpg",
+    "productId": 1027,
+    "brand": "KTM",
+    "price": 11999,
+    "taxPercentage": 5.5,
+    "rating": 4.7,
+    "metadata": "Enduro bike, 690cc, WP suspension",
+    "timestamp": "2023-10-27T10:45:00Z"
+  },
+
+  {
+    "productName": "Harley-Davidson Fat Boy",
+    "productDescription": "A classic cruiser with a Milwaukee-Eight 107 engine and iconic styling.",
+    "imgThumbnail": "https://example.com/harley-fat-boy.jpg",
+    "productId": 1028,
+    "brand": "Harley-Davidson",
+    "price": 20999,
+    "taxPercentage": 6,
+    "rating": 4.6,
+    "metadata": "Cruiser, 1746cc, Solid wheels",
+    "timestamp": "2023-10-28T12:35:00Z"
+  },
+
+  {
+    "productName": "Yamaha WR250R",
+    "productDescription": "A versatile dual-sport bike with a 250cc liquid-cooled engine for on and off-road riding.",
+    "imgThumbnail": "https://example.com/yamaha-wr250r.jpg",
+    "productId": 1029,
+    "brand": "Yamaha",
+    "price": 6699,
+    "taxPercentage": 5,
+    "rating": 4.5,
+    "metadata": "Dual-sport, 250cc, Fuel injection",
+    "timestamp": "2023-10-29T14:25:00Z"
+  },
+
+  {
+    "productName": "Ducati Scrambler Desert Sled",
+    "productDescription": "An off-road-focused scrambler with a 803cc air-cooled V-twin engine.",
+    "imgThumbnail": "https://example.com/ducati-scrambler-desert-sled.jpg",
+    "productId": 1030,
+    "brand": "Ducati",
+    "price": 11795,
+    "taxPercentage": 6,
+    "rating": 4.6,
+    "metadata": "Scrambler, 800cc, Off-road suspension",
+    "timestamp": "2023-10-30T16:15:00Z"
+  }
 ]
